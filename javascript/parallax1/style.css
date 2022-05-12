@@ -1,0 +1,78 @@
+@charset "UTF-8";
+*{margin: 0; padding: 0;}
+
+
+a{text-decoration: none;}
+.clearfix::after{
+    content: "";
+    clear:both;
+    display: block;
+}
+
+/* html {
+    scroll-behavior: smooth;
+  } */
+
+
+.nav{
+    /* position에서 fixed되거나 absolute가 적용되면
+    영역을 자식의 공간만 잡음. display:block요소의 
+    성질의 의해 부모를 모두 차지하는 속성이 없어진다
+    그렇다고 인라인요소로 변하는것은 아니다. */
+   position: fixed;
+   left: 0; top: 0; 
+   right:0;
+   /* width: 100%; */
+   background-color:rgba(255,255,255,0.3);
+   z-index: 100;
+}
+.nav h1{float: left;
+font-size: 40px; color: #fff;
+padding: 5px;
+}
+.nav ul{float: right;
+}
+.nav ul li{
+    display: inline;
+}
+.nav ul li a{
+    /* 부모가 inline요소이면 자식이 display:block이 
+    되면 부모를 무시하고 ul요소의 100%를 차지한다 */
+    display: inline-block;
+    padding: 20px 15px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+
+
+
+
+#contents{}
+#contents div{height: 100vh;}
+#contents div h2{
+    position: relative;
+    top: 30%;
+    text-align: center;
+    color: #fff;
+    font-size: 90px;
+}
+
+#contents div#section1{
+    background: linear-gradient(to right, #654ea3, #eaafc8); 
+}
+#contents div#section2{
+    background: linear-gradient(to right, #c94b4b, #4b134f);
+}
+#contents div#section3{
+    background: linear-gradient(to right, #00b09b, #96c93d);
+}
+#contents div#section4{
+    background: linear-gradient(to right, #283c86, #45a247);
+}
+#contents div#section5{
+    background: linear-gradient(to right, #44a08d, #093637); 
+}
+#contents div#section6{
+    background: linear-gradient(to right, #ff5f6d, #ffc371); 
+}
